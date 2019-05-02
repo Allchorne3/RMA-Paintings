@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/lightbox/lightbox.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Paintings</title>
+</head>
+<body>
+    <header>
+        <div class="main-header">
+            <p class="logo">RMA Paintings</p>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="paintings.html">Paintings</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contacts.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="main-content">
+        <div id="myBtnContainer">
+            <button class="btn active" onclick="filterSelection('all')"> Show all</button>
+            <button class="btn" onclick="filterSelection('abstract')"> Abstracts</button>
+            <button class="btn" onclick="filterSelection('animals')"> Animals</button>
+            <button class="btn" onclick="filterSelection('snow')"> Snow</button>
+            <button class="btn" onclick="filterSelection('trees')"> Trees</button>
+            <button class="btn" onclick="filterSelection('landscape')"> Lanscape</button>
+            <button class="btn" onclick="filterSelection('night')"> Night</button>
+            <button class="btn" onclick="filterSelection('buildings')"> Buildings</button>
+        </div>
+        <div id="image-container">
+            <div class="column abstract">
+                <div class="content">
+                    <a href="images/paintings/1.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/1.jpg" alt="Abstracts"></a>
+                </div>
+            </div>
+            <div class="column trees">
+                <div class="content">
+                    <a href="images/paintings/2.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/2.jpg" alt="Trees"></a>
+                </div>
+            </div>
+            <div class="column animals">
+                <div class="content">
+                    <a href="images/paintings/4.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/4.jpg" alt="Animals"></a>
+                </div>
+            </div>
+            <div class="column night landscape">
+                <div class="content">
+                    <a href="images/paintings/5.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/5.jpg" alt="night"></a>
+                </div>
+            </div>
+            <div class="column snow trees">
+                <div class="content">
+                    <a href="images/paintings/6.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/6.jpg" alt="Snow"></a>
+                </div>
+            </div>
+            <div class="column landscape buildings">
+                <div class="content">
+                    <a href="images/paintings/7.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/7.jpg" alt="landscape buildings"></a>
+                </div>
+            </div>
+            <div class="column landscape">
+                <div class="content">
+                    <a href="images/paintings/8.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/8.jpg" alt="Landscape"></a>
+                </div>
+            </div>
+            <div class="column snow">
+                <div class="content">
+                    <a href="images/paintings/9.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/9.jpg" alt="Snow"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/lightbox/lightbox-plus-jquery.min.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>      
+    

@@ -1,0 +1,39 @@
+
+  /* Create three equal columns that floats next to each other */
+  .column {
+    width: 100%;
+    display: none; /* Hide columns by default */
+  }
+    
+  /* Content */
+  .content {
+    img {
+      //max-width: 300px;
+      width: 100%;
+    }
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .show {
+    display: block;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    border: none;
+    outline: none;
+    padding: 6px 8px;
+    background-color: white;
+    cursor: pointer;
+  }
+  
+  /* Add a grey background color on mouse-over */
+  .btn:hover {
+    background-color: #ddd;
+  }
+  
+  /* Add a dark background color to the active button */
+  .btn.active {
+    background-color: #666;
+    color: white;
+  }
