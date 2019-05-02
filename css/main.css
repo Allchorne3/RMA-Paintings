@@ -68,7 +68,7 @@ header .main-nav {
     padding-top: 20px;
     display: -ms-grid;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 0.7fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px; }
 
 /* Create three equal columns that floats next to each other */
