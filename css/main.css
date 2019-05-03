@@ -8,45 +8,61 @@
 body {
   padding-bottom: 50px; }
 
-.logo {
-  font-family: "Satisfy", cursive;
-  font-size: 25px; }
+.logo,
+.mobile-logo {
+  font-family: "Satisfy", cursive; }
 
 .main-nav {
   font-family: "Satisfy", cursive; }
 
 header .main-header {
-  text-align: center;
-  width: 100%;
-  padding: 0 30px;
-  height: 150px;
+  height: 100px;
   background-color: white;
+  padding: 0 70px;
   color: black;
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  border-bottom: solid 1px rgba(0, 0, 0, 0.2); }
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center; }
+  @media all and (max-width: 760px) {
+    header .main-header {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+      flex-direction: column;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center;
+      margin-top: 70px; } }
 
 header .logo {
-  margin-bottom: 30px;
   font-size: 40px; }
 
 header .main-nav {
   -webkit-transition: all 0.2s cubic-bezier(0.01, -0.01, 0, 0.99);
   -o-transition: all 0.2s cubic-bezier(0.01, -0.01, 0, 0.99);
   transition: all 0.2s cubic-bezier(0.01, -0.01, 0, 0.99); }
+  header .main-nav.reveal {
+    display: block; }
   header .main-nav li {
     list-style: none;
-    display: inline-block; }
-    header .main-nav li:not(:last-child) {
-      margin-right: 20px; }
+    display: inline-block;
+    margin-left: 20px; }
+    @media all and (max-width: 760px) {
+      header .main-nav li {
+        margin: 0;
+        display: block;
+        text-align: center; } }
   header .main-nav a {
     text-decoration: none;
     color: #555;
@@ -58,18 +74,44 @@ header .main-nav {
       text-decoration: underline;
       color: #111; }
 
+#home-content {
+  width: 80%;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px; }
+  @media all and (max-width: 760px) {
+    #home-content {
+      margin-top: 70px; } }
+  #home-content img {
+    max-width: 100%;
+    width: 100%; }
+
 #main-content {
   grid-gap: 50px;
   margin: 0 auto;
   width: 80%;
   height: 100vh;
-  margin-top: 50px; }
-  #main-content #image-container {
+  padding: 50px 0;
+  margin-bottom: 150px; }
+  @media all and (max-width: 760px) {
+    #main-content {
+      margin-top: 50px; } }
+  #main-content .image-container {
     padding-top: 20px;
     display: -ms-grid;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-gap: 10px; }
+  #main-content .latest-paintings {
+    width: 100%;
+    background-color: blue;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 100%; }
 
 /* Create three equal columns that floats next to each other */
 .column {

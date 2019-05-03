@@ -3,12 +3,22 @@
     margin: 0 auto
     width: 80%
     height: 100vh
-    margin-top: 50px
+    padding: 50px 0
+    margin-bottom: 150px
 
-    #image-container
+    +respond(phone)
+        margin-top: 50px
+
+    .image-container
         padding-top: 20px
         display: grid
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
         grid-gap: 10px
 
+    .latest-paintings
+        width: 100%
+        background-color: blue
+        display: grid
+        grid-template-columns: repeat(2, 1fr)
+        max-width: 100%
         
