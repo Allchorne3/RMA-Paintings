@@ -10,23 +10,41 @@
 </head>
 <body>
     <header>
-        <div class="main-header">
-            <p class="logo">RMA Paintings</p>
-            <nav class="main-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="paintings.html">Paintings</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contacts.html">Contact</a></li>
-                </ul>
-            </nav>
+        <div class="nav-headers">
+            <h1 class="logo"><a href="#">RMA<span class="logo-span">PAINTINGS</span></a></h1>
+            <div id="hamburger">
+                <div class="main-item menu">
+                    <span class="line line01"></span>
+                    <span class="line line02"></span>
+                    <span class="line line03"></span>
+                </div>
+            </div>
+        </div>
+        <div class="nav-text-container">
+            <div class="text-container">
+                <p>I'm Ric.</p>
+                <p>I have a passion for painting. I have been doing <span><a href="#">oil paintings</a></span> for the last 8 years. My inspirations are Bob Ross and Kevin Hill.</p>
+                <p>My goal is to one day teach and inspire other people. You can <span><a href="#">follow me</a></span> on YouTube to watch me paint.</p>
+                <p>You can <span><a href="#">buy</a></span> my paintings here. Just <span><a href="#">contact me</a></span> and we'll go from there.</p>
+            </div>
         </div>
     </header>
 
-    <section id="home-content">
-        <a href="images/paintings/2.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/2.jpg" alt="Abstracts"></a>
-        <a href="images/paintings/2.jpg" data-lightbox="paintingsgallery"><img src="images/paintings/2.jpg" alt="Abstracts"></a>
+    <section id="main">
+        <div class="main-content">
+            <h1 class="home-title">RMA <span>PAINTINGS</span></h1>
+            <div class="categories-btn">Categories</div>
+            <p class="category-close">Close</p>
+        </div>
+    </section>
+
+    <section id="categories">
+        <a href="mountains.html"><div class="category mountains">Mountains</div></a>
+        <a href="summer.html"><div class="category summer">Summer</div></a>
+        <a href="landscapes.html"><div class="category landscapes">Landscapes</div></a>
+        <a href="autumn.html"><div class="category autumn">Autumn</div></a>
+        <a href="winter.html"><div class="category winter">Winter</div></a>
+        <a href="waterfalls.html"><div class="category waterfalls">Waterfalls</div></a>
     </section>
 
     <script src="js/lightbox/lightbox-plus-jquery.min.js"></script>

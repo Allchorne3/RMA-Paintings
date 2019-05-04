@@ -1,72 +1,44 @@
+var hamburger = document.querySelector("#hamburger")
+var menu = document.querySelector(".menu")
+var mainContent = document.querySelector("#main")
+var catButton = document.querySelector(".categories-btn")
+var catClose = document.querySelector(".category-close")
+var logoSpan = document.querySelector(".logo-span")
 
-//----------------------------------------------------------------//
+//reveal nav when clicking the hamburger menu
+hamburger.addEventListener("click", _ => {
+  menu.classList.toggle("close")
+  mainContent.classList.toggle("nav-open")
+  logoSpan.classList.toggle("span-reveal")
+})
 
-// var navToggle = document.querySelector('.nav-toggle');
-// var navMenu = document.querySelector('.main-nav');
+//reveal the categories when the button is clicked and bring "close" opacity up to 1
+catButton.addEventListener("click", _ => {
+  mainContent.classList.add("category-reveal")
+  catClose.classList.add("close-reveal")
+  catButton.style.pointerEvents = "none"
+})
 
-// navToggle.addEventListener("click", function(){
-//     menuDivider.classList.toggle("nav-reveal");
-//     setTimeout(function(){
-//         navMenu.classList.add("nav-reveal");
-//     }, 300);
-//     setTimeout(function(){
-//         navClose.style.opacity = "1";
-//     }, 500);
-// });
+catClose.addEventListener("click", _ => {
+  mainContent.classList.remove("category-reveal")
+  catClose.classList.remove("close-reveal")
+  catButton.style.pointerEvents = "auto"
+})
 
-var navToggle = document.querySelector('.nav-toggle');
-var mobileMenu =document.querySelector('.main-nav');
+//-------------------------------------------------------------------------------------//
+// MEDIA QUERIES
 
-navToggle.addEventListener("click", function(){
-  mobileMenu.classList.toggle("reveal");
-});
+var tablet = window.matchMedia("(max-width: 900px)")
+var phone = window.matchMedia("(max-width: 550px)")
 
-//---------------------------------------------------------------------//
-filterSelection("all") // Execute the function and show all columns
-function filterSelection(c) {
-  var x, i;
-  x = document.getElementsByClassName("column");
-  if (c == "all") c = "";
-  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
-  for (i = 0; i < x.length; i++) {
-    w3RemoveClass(x[i], "show");
-    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+function mediaQueryMatch(x) {
+  if (tablet.matches) { // If media query matches
+    mainContent.classList.toggle("nav-open-tab")
+  } else if(phone.matches) {
+    mainContent.classList.toggle("nav-open-mobile")
+  } else {
+    mainContent.classList.toggle("nav-open")
   }
 }
 
-// Show filtered elements
-function w3AddClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    if (arr1.indexOf(arr2[i]) == -1) {
-      element.className += " " + arr2[i];
-    }
-  }
-}
-
-// Hide elements that are not selected
-function w3RemoveClass(element, name) {
-  var i, arr1, arr2;
-  arr1 = element.className.split(" ");
-  arr2 = name.split(" ");
-  for (i = 0; i < arr2.length; i++) {
-    while (arr1.indexOf(arr2[i]) > -1) {
-      arr1.splice(arr1.indexOf(arr2[i]), 1);
-    }
-  }
-  element.className = arr1.join(" ");
-}
-
-// Add active class to the current button (highlight it)
-var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function(){
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
 

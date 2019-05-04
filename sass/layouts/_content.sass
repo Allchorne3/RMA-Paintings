@@ -1,24 +1,90 @@
-#main-content
-    grid-gap: 50px
-    margin: 0 auto
-    width: 80%
+#main
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    +centerBg(home-bg-small, .9, .9)
+    background-attachment: fixed
     height: 100vh
-    padding: 50px 0
-    margin-bottom: 150px
+    z-index: 10
+    transition: all .3s ease-in-out
+    display: flex
+    justify-content: center
 
-    +respond(phone)
-        margin-top: 50px
+    .category-close
+        position: absolute
+        bottom: -120px
+        left: 50%
+        transform: translateX(-50%)
+        background-color: #fff
+        color: $clr-primary
+        padding: 5px 16px
+        text-transform: uppercase
+        letter-spacing: 4px
+        border-radius: 15px
+        font: 
+            family: $ff-main
+            size: 12px
+            weight: $fw-bold
+        opacity: 0
+        transition: all .5s cubic-bezier(0.95, 0.05, 0.795, 0.035)
 
-    .image-container
-        padding-top: 20px
-        display: grid
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr))
-        grid-gap: 10px
+        &:hover
+            cursor: pointer
 
-    .latest-paintings
-        width: 100%
-        background-color: blue
-        display: grid
-        grid-template-columns: repeat(2, 1fr)
-        max-width: 100%
+        &.close-reveal
+            opacity: 1
+            bottom: 10px    
+
+    &.nav-open
+            top: 430px
+
+    &.category-reveal   
+        top: -125px
+
+
+    .main-content
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+    .home-title
+        color: #fff
+        font-family: $ff-main
+        font-size: 50px
+        display: flex
+        flex-direction: row
         
+        +respond(phone)
+            flex-direction: column
+            align-items: center
+
+        a
+            color: #fff
+            text-decoration: none
+
+        span
+            font-weight: $fw-thin
+            display: inline-block
+
+    .categories-btn
+        background-color: $clr-primary
+        color: #fff
+        display: inline-block
+        text-align: center
+        font:
+            family: $ff-main
+            weight: $fw-bold
+            size: 13px
+        letter-spacing: 3px
+        text-transform: uppercase
+        padding: 15px 20px
+        border-radius: 25px
+        margin-top: 10px
+        transition: all .5s ease-in-out
+
+        &:hover
+            background-color: #fff
+            color: $clr-primary
+            cursor: pointer

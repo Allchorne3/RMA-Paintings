@@ -1,49 +1,58 @@
-header  
+header
+	background-color: #181818
+	height: 450px
 
-    .main-header
-        height: 100px
-        background-color: white
-        padding: 0 70px
-        color: black
-        width: 100%
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
-        +respond(phone)
-            flex-direction: column
-            justify-content: center
-            margin-top: 70px
+	+respond(tablet)
+		height: 450px
 
-    .logo
-        font-size: 40px
+	+respond(phone)
+		height: 480px
 
-    .main-nav
-        transition: all .2s cubic-bezier(.01,-0.01,0,.99)
+	z-index: 99
 
-        &.reveal
-            display: block
-        
-        li
-            list-style: none
-            display: inline-block
-            margin-left: 20px
+.nav-headers
+	width: 100%
+	height: 50px
+	padding: 10px 60px
+	display: flex
+	justify-content: space-between
+	position: absolute
+	color: #fff
+	z-index: 999
 
-            +respond(phone)
-                margin: 0
-                display: block
-                text-align: center
+	#hamburger
+		.line
+			background: white
 
-        a   
-            text-decoration: none
-            color: #555
-            transition: all .5s linear
-            font-size: 20px
+	+respond(phone)
+		padding: 10px 30px
 
-            &:hover
-                text-decoration: underline
-                color: #111
-        
- 
+.nav-text-container
+	width: 92%
+	margin: 0 auto
+	color: #fff
+	padding: 10px
+	font: 
+		family: $ff-main
+		size: 25px
 
-            
+	+respond(tablet)
+		font-size: 20px
+
+	.text-container
+		margin-top: 80px
+
+	p	
+		font-weight: $fw-thin
+		&:not(:last-child)
+			margin-bottom: 10px
+
+		span
+			font-weight: $fw-medium
+			a
+				text-decoration: none
+				color: #fff
+			&:hover
+				text-decoration: underline
+
+			

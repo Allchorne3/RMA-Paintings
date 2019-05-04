@@ -1,0 +1,36 @@
+#categories
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    height: 125px
+    overflow-x: scroll
+    z-index: 1
+    
+    .category
+        float: left
+        width: 200px
+        height: 125px
+        display: flex
+        justify-content: center
+        align-items: center
+        text-transform: uppercase
+        color: #fff
+        font:
+            family: $ff-main
+            weight: $fw-bold
+            size: 13px
+        letter-spacing: 3px
+    
+    .mountains
+        +thumb-overlay(mountains-thumb, 1, .2)
+    .summer
+        +thumb-overlay(summer-thumb, 1, .2)
+    .landscapes
+        +thumb-overlay(landscapes-thumb, 1, .2)
+    .autumn
+        +thumb-overlay(autumn-thumb, 1, .2)
+    .winter
+        +thumb-overlay(winter-thumb, 1, .2)
+    .waterfalls
+        +thumb-overlay(waterfalls-thumb, 1, .2)

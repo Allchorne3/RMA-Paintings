@@ -1,4 +1,20 @@
 @mixin respond($breakpoint)
-    @if $breakpoint == "phone"
-        @media all and  (max-width: 760px)
+    @if $breakpoint == "tablet"
+        @media all and  (max-width: 900px)
             @content
+
+    @if $breakpoint == "phone"
+        @media all and  (max-width: 550px)
+            @content
+
+@mixin thumb-overlay($image, $opacity1: .5, $opacity2: .5)
+    background:
+        image: linear-gradient(rgba($clr-primary, $opacity1), rgba($clr-primary, $opacity2)), url("../images/thumbnails/#{$image}.jpg")
+        position: center
+        size: cover
+
+@mixin centerBg($image, $opacity1, $opacity2)
+    background:
+        image: linear-gradient(rgba($clr-primary, $opacity1), rgba($clr-primary, $opacity2)), url("../images/#{$image}.jpg")
+        position: center
+        size: cover

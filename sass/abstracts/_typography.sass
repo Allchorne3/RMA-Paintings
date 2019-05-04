@@ -1,9 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Satisfy')
+.logo
+    font-family: $ff-main
+    a
+        color: #fff
+        text-decoration: none
 
-$ff-main: 'Satisfy', cursive
-$ff-body: 'Lato', sans-serif
+    span
+        font-weight: $fw-thin
+        opacity: 0
+        transition: all .4s ease-in-out
 
-$fw-light: 300
-$fw-regular: 400
-$fw-bold: 700
-$fw-xbold: 900
+        &.span-reveal
+            opacity: 1
+
+.main-nav
+    font-family: $ff-main
