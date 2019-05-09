@@ -162,9 +162,11 @@ header {
     #main .home-title span {
       font-weight: 100;
       display: inline-block; }
-  #main .work-links img {
-    max-width: 100%;
-    width: 70px; }
+  #main .work-links {
+    margin-top: 10px; }
+    #main .work-links img {
+      max-width: 100%;
+      width: 70px; }
   #main .categories-btn {
     background-color: #181818;
     color: #fff;
