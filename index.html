@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/lightbox/lightbox.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/main.css">
     <title>RMA Paintings</title>
 </head>
 <body>
-    <header>
+    <header class="main-header">
         <div class="nav-headers">
             <h1 class="logo"><a href="#">RMA<span class="logo-span">PAINTINGS</span></a></h1>
             <div id="hamburger">
@@ -23,28 +25,158 @@
         <div class="nav-text-container">
             <div class="text-container">
                 <p>I'm Ric.</p>
-                <p>I have a passion for painting. I have been doing <span><a href="#">oil paintings</a></span> for the last 8 years. My inspirations are Bob Ross and Kevin Hill.</p>
-                <p>My goal is to one day teach and inspire other people. You can <span><a href="#">follow me</a></span> on YouTube to watch me paint.</p>
-                <p>You can <span><a href="#">buy</a></span> my paintings here. Just <span><a href="#">contact me</a></span> and we'll go from there.</p>
-            </div>
+                <p>I have a passion for painting. I have been doing <span><a href="#section-paintings">oil paintings</a></span> for the last 12 years. My inspirations are Bob Ross and Kevin Hill.</p>
+                <p>My goal is to one day teach and inspire other people. You can <span><a href="https://www.youtube.com/channel/UCmeC2JIiTxQlJcUjyE_RTyg">follow me</a></span> on YouTube to watch me paint.</p>
+                <p>You can <span><a href="shop.html">buy</a></span> my paintings here. Just <span><a href="mailto:rickallchorne@gmail.com?subject=Your Oil Paintings">contact me</a></span> and we'll go from there.</p>
+            </div> 
         </div>
     </header>
 
     <section id="main">
-        <div class="main-content">
+        <div class="home-content">
             <h1 class="home-title">RMA <span>PAINTINGS</span></h1>
-            <div class="categories-btn">Categories</div>
-            <p class="category-close">Close</p>
+            <div class="categories-btn"><a href="#section-paintings">See my paintings</a></div>
+            <div class="work-links">
+                <a href="https://www.youtube.com/channel/UCmeC2JIiTxQlJcUjyE_RTyg"><img class="youtube-logo" src="images/icons/youtube-logo.png" alt="YouTube link"></a>                
+                <a href="shop.html"><img class="etsy-logo" src="images/icons/etsy-logo.png" alt="Etsy store link"></a> 
+            </div>
         </div>
     </section>
 
-    <section id="categories">
-        <a href="mountains.html"><div class="category mountains">Mountains</div></a>
-        <a href="summer.html"><div class="category summer">Summer</div></a>
-        <a href="landscapes.html"><div class="category landscapes">Landscapes</div></a>
-        <a href="autumn.html"><div class="category autumn">Autumn</div></a>
-        <a href="winter.html"><div class="category winter">Winter</div></a>
-        <a href="waterfalls.html"><div class="category waterfalls">Waterfalls</div></a>
+    <section id="section-paintings">
+        <div class="painting-content">
+            <h1 class="paintings-title">My Paintings</h1>
+            <div class="paintings-line"></div>
+            <ul class="painting-categories">
+                <li class="button" data-filter="all">See All</li>
+                <li class="button" data-filter="mountains">Mountains</li>
+                <li class="button" data-filter="winter">Winter</li>
+                <li class="button" data-filter="autumn">Autumn</li>
+                <li class="button" data-filter="waterfalls">Waterfalls</li>
+                <li class="button" data-filter="seascapes">Seascapes</li>
+                <li class="button" data-filter="floral">Floral</li>
+                <li class="button" data-filter="buildings">Buildings</li>
+            </ul>
+            <div class="paintings">
+                
+                <a class="filter mountains" href="images/paintings/1.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/1-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains water" href="images/paintings/2.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/2-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter floral" href="images/paintings/3.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/3-thumb.jpg" alt="Painting">
+                </a>
+                
+                <a class="filter mountains buildings" href="images/paintings/4.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/4-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/5.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/5-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter waterfalls" href="images/paintings/6.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/6-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/7.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/7-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/8.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/8-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains" href="images/paintings/9.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/9-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter buildings" href="images/paintings/10.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/10-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter mountains" href="images/paintings/11.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/11-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter autumn buildings" href="images/paintings/12.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/12-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/13.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/13-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter buildings" href="images/paintings/14.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/14-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains waterfalls" href="images/paintings/15.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/15-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/16.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/16-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter buildings" href="images/paintings/17.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/17-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter buildings" href="images/paintings/18.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/18-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter buildings" href="images/paintings/19.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/19-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter buildings" href="images/paintings/20.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/20-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter" href="images/paintings/21.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/21-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains" href="images/paintings/22.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/22-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains winter" href="images/paintings/23.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/23-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter mountains" href="images/paintings/24.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/24-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter seascapes" href="images/paintings/25.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/25-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter seascapes" href="images/paintings/26.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/26-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter seascapes" href="images/paintings/27.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/27-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter buildings" href="images/paintings/28.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/28-thumb.jpg" alt="Painting">
+                </a>
+
+                <a class="filter winter" href="images/paintings/29.jpg" data-lightbox="mypaintings">
+                    <img src="images/thumbnails/29-thumb.jpg" alt="Painting">
+                </a>
+                
+            </div>
+        </div>
     </section>
 
     <script src="js/lightbox/lightbox-plus-jquery.min.js"></script>

@@ -1,0 +1,69 @@
+#main
+    width: 100%
+    height: 100vh
+    transition: all .3s ease-in-out
+    display: flex
+    justify-content: center 
+
+    +respond(phone)
+        margin-top: 0
+
+    .home-content
+        +centerBg(home-bg-small, .9, .9)
+        background-attachment: fixed
+        width: 100%
+        display: flex
+        justify-content: center
+        align-items: center
+        flex-direction: column
+
+    .home-title
+        color: #fff
+        font-family: $ff-main
+        font-size: 50px
+        display: flex
+        flex-direction: row
+        
+        +respond(phone)
+            flex-direction: column
+            align-items: center
+
+        a
+            color: #fff
+            text-decoration: none
+
+        span
+            font-weight: $fw-thin
+            display: inline-block
+
+    .work-links
+        img
+            max-width: 100%
+            width: 70px
+            
+    .categories-btn
+        background-color: $clr-primary
+        color: #fff
+        display: inline-block
+        text-align: center
+        font:
+            family: $ff-main
+            weight: $fw-bold
+            size: 13px
+        letter-spacing: 3px
+        text-transform: uppercase
+        padding: 15px 20px
+        border-radius: 25px
+        margin-top: 10px
+        transition: all .3s ease-in-out
+
+        a
+            color:#fff
+            text-decoration: none
+
+        &:hover
+            background-color: #fff
+            cursor: pointer
+
+            a
+                color: $clr-primary
