@@ -115,10 +115,10 @@ header {
     #main {
       margin-top: 0; } }
   #main .home-content {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 24, 24, 0.9)), to(rgba(24, 24, 24, 0.9))), url("../images/home-bg-small.jpg");
-    background-image: -webkit-linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-small.jpg");
-    background-image: -o-linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-small.jpg");
-    background-image: linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-small.jpg");
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(24, 24, 24, 0.9)), to(rgba(24, 24, 24, 0.9))), url("../images/home-bg-web.jpg");
+    background-image: -webkit-linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-web.jpg");
+    background-image: -o-linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-web.jpg");
+    background-image: linear-gradient(rgba(24, 24, 24, 0.9), rgba(24, 24, 24, 0.9)), url("../images/home-bg-web.jpg");
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
