@@ -1,10 +1,13 @@
+$tabletWidth: 900px
+$phoneWidth: 550px
+
 @mixin respond($breakpoint)
     @if $breakpoint == "tablet"
-        @media all and  (max-width: 900px)
+        @media all and  (max-width: $tabletWidth)
             @content
 
     @if $breakpoint == "phone"
-        @media all and  (max-width: 550px)
+        @media all and  (max-width: $phoneWidth)
             @content
 
 @mixin thumb-overlay($image, $opacity1: .5, $opacity2: .5)

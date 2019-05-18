@@ -38,11 +38,43 @@
 
     .work-links
         margin-top: 10px
+        display: flex
+        flex-direction: row
 
-        img
-            max-width: 100%
-            width: 70px
-            
+        a
+            text-decoration: none
+            i
+                color: #fff
+                font-size: 42px
+                
+            &:not(:first-child)
+                margin-left: 10px
+
+            &:not(.etsy-link)
+                margin-top: 5px
+
+    .etsy-link
+        display: flex
+        flex-direction: column
+        color: #fff
+        text-transform: uppercase
+        font:
+            size: 12px
+            family: 'Raleway'
+            weight: 700
+
+    .fa-etsy:hover
+        color: #F45800
+
+    
+    .fa-youtube:hover
+        color: #FF0000
+
+    .fa-instagram:hover
+        color: #fbad50   
+               
+        // color: linear-gradient(rgba(#4c68d7, 1), rgba(#8a3ab9, 1), rgba(#cd486b, 1), rgba(#fbad50, 1))   
+                
     .categories-btn
         background-color: $clr-primary
         color: #fff
