@@ -295,6 +295,13 @@ header {
   -ms-transform: rotate(90deg);
   transform: rotate(90deg); }
 
+html body section#section-paintings a p.bttop {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Raleway';
+  font-weight: 600;
+  color: #181818; }
+
 .shop-title {
   text-align: center;
   font-size: 4vw;
