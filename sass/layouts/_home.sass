@@ -4,6 +4,33 @@
     transition: all .3s ease-in-out
     display: flex
     justify-content: center 
+    position: relative
+
+    .btt-btn
+        position: fixed
+        width: 60px
+        height: 60px
+        background: rgba(slategrey, .3)
+        border: solid 5px rgba(#333,1)
+        line-height: 60px
+        text-align: center
+        font:
+            family: 'Raleway'
+            weight: 600
+        color: rgba(#333,1)
+        border-radius: 50%
+        bottom: -70px
+        right: 50px
+        box-shadow: 0 0 10px 3px rgba(0,0,0,.5)
+        transition: all .3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+
+        .fa-chevron-up
+            font-size: 30px
+
+        +respond(phone)
+            bottom: 20px
+            right: 20px
+            
 
     +respond(phone)
         margin-top: 0

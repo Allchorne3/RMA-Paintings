@@ -74,6 +74,12 @@ $(window).scroll(function(){
   if(wScroll > $('.home-content').height()) {
     $('.main-header').addClass("trans")
   }
+
+  if(wScroll > $('.home-content').height()) {
+    $('.btt-btn').css("bottom", "50px")
+  } else {
+    $('.btt-btn').css("bottom", "-70px")
+  }
 })
 
 
