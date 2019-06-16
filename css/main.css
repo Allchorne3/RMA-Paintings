@@ -30,12 +30,14 @@ header {
   position: fixed;
   top: 0;
   left: 0;
+  right: 0;
   background-color: #181818;
   height: 50px;
   overflow: hidden;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
-  transition: all .3s ease-in-out; }
+  transition: all .3s ease-in-out;
+  z-index: 99999; }
   header.nav-open {
     height: 350px; }
   header.trans {
@@ -75,7 +77,7 @@ header {
   color: #fff;
   padding: 10px;
   font-family: "Raleway", cursive;
-  font-size: 2vw; }
+  font-size: 1.5vw; }
   @media all and (max-width: 900px) {
     .nav-text-container {
       font-size: 20px; } }

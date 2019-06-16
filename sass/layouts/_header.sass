@@ -2,10 +2,12 @@ header
 	position: fixed
 	top: 0
 	left: 0
+	right: 0
 	background-color: rgba($clr-primary, 1)
 	height: 50px
 	overflow: hidden
 	transition: all .3s ease-in-out
+	z-index: 99999
 
 	&.nav-open
         height: 350px
@@ -46,7 +48,7 @@ header
 	padding: 10px
 	font: 
 		family: $ff-main
-		size: 2vw
+		size: 1.5vw
 
 	+respond(tablet)
 		font-size: 20px
