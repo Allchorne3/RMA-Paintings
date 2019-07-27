@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,700,900|Satisfy");
 @import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,600,700");
+@import url("https://fonts.googleapis.com/css?family=Pathway+Gothic+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -31,19 +32,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
-  background-color: #181818;
+  background-color: transparent;
   height: 50px;
   overflow: hidden;
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out;
   z-index: 99999; }
-  header.nav-open {
-    height: 350px; }
-  header.trans {
-    background-color: rgba(24, 24, 24, 0.98); }
-  header.opaque {
-    background-color: #181818; }
 
 .nav-headers {
   width: 100%;
@@ -60,13 +55,32 @@ header {
   -webkit-transition: all .3s ease-in-out;
   -o-transition: all .3s ease-in-out;
   transition: all .3s ease-in-out; }
-  .nav-headers.nav-reveal {
-    padding: 10px 60px; }
-    @media all and (max-width: 550px) {
-      .nav-headers.nav-reveal {
-        padding: 10px 30px; } }
-  .nav-headers #hamburger .line {
-    background: white; }
+  .nav-headers .nav-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    list-style: none;
+    font-family: "Pathway Gothic One", sans-serif;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    font-size: 23px;
+    text-transform: uppercase;
+    letter-spacing: 3px; }
+    .nav-headers .nav-links .nav-link a {
+      color: #FFFFFF;
+      text-decoration: none;
+      -webkit-transition: all .5s ease-in-out;
+      -o-transition: all .5s ease-in-out;
+      transition: all .5s ease-in-out; }
+      .nav-headers .nav-links .nav-link a:hover {
+        color: orangered; }
+    .nav-headers .nav-links .nav-link:not(:last-child) {
+      margin-right: 30px; }
   @media all and (max-width: 550px) {
     .nav-headers {
       padding: 10px 30px; } }

@@ -3,20 +3,11 @@ header
 	top: 0
 	left: 0
 	right: 0
-	background-color: rgba($clr-primary, 1)
+	background-color: transparent
 	height: 50px
 	overflow: hidden
 	transition: all .3s ease-in-out
 	z-index: 99999
-
-	&.nav-open
-        height: 350px
-
-	&.trans
-		background-color: rgba($clr-primary, .98)	
-
-	&.opaque
-		background-color: rgba($clr-primary, 1)
 
 .nav-headers
 	width: 100%
@@ -28,15 +19,26 @@ header
 	color: #fff
 	transition: all .3s ease-in-out
 
-	&.nav-reveal
-		padding: 10px 60px
+	.nav-links 
+		display: flex
+		flex-direction: row
+		list-style: none
+		font-family: $ff-third
+		align-items: center
+		font-size: 23px
+		text-transform: uppercase
+		letter-spacing: 3px
 
-		+respond(phone)
-			padding: 10px 30px
+		.nav-link
 
-	#hamburger
-		.line
-			background: white
+			a
+				color: $clr-secondary
+				text-decoration: none
+				transition: all .5s ease-in-out
+				&:hover
+					color: orangered
+			&:not(:last-child)
+				margin-right: 30px
 
 	+respond(phone)
 		padding: 10px 30px
