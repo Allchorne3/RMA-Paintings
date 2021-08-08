@@ -1,0 +1,134 @@
+@use '../abstracts' as *;
+.gallery {
+
+    padding-bottom: $spacing-huge;
+
+    .i {
+
+        .ismall {
+            
+            // margin-left: $spacing-large;
+            // margin-right: $spacing-large;
+
+            @include responsive(desktop) {
+                margin-left: $spacing-large;
+                margin-right: $spacing-large;
+            }
+
+            .filter-toggle {
+                text-align: right;
+                border-bottom: solid 1px lighten($light-grey, 15%);
+                padding-bottom: $spacing-small;
+                padding-top: $spacing-large;
+                background: $antique-white;
+                position: relative;
+                z-index: 1;
+                
+                @include responsive(mobile) {
+                    display: none;
+                }
+
+                span {
+                    margin-right: $spacing-medium;
+                    position: relative;
+                    
+                    &:hover {
+                        cursor: pointer;
+                    }
+                }
+            }
+
+            .filters {
+
+                transition: all .3s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+                @include responsive(mobile) {
+                    display: none;
+                }
+        
+                margin-bottom: -70px;
+                position: relative;
+                top: -120px;
+
+                &.active {
+                    margin-bottom: 70px;
+                    top: 20px;
+                }
+                
+                ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 20px;
+
+                    .list {
+                        list-style: none;
+                        margin-bottom: 10px;
+                        font-weight: $fw-medium;
+                        border: solid 2px $blue;
+                        border-radius: 30px;
+                        color: $blue;
+                        cursor: pointer;
+                        padding: 10px 20px;
+                        font-family: $ff-main;
+                        font-size: 17px;
+                        transition: all .2s ease-in-out;
+                        
+
+                        @include responsive(desktop) {
+                            font-size: 15px;
+                            padding: 5px 10px;
+                            border-radius: 30px;
+                        }
+
+                        &:not(:last-child) {
+                            margin-right: 15px;
+                        }
+
+                        &:hover {
+                            background: lighten($blue, 10%);
+                            color: $antique-white;
+                        }
+
+                        &.active {
+                            background: $bp-gradient;
+                            color: $antique-white;
+                        }
+                    }
+                }
+
+            }
+
+        }
+
+        .images {
+            display: flex;
+            flex-wrap: wrap;    
+            justify-content: center;
+            // margin-top: $spacing-large;
+            margin: $spacing-large $spacing-large 0;
+
+            .itemBox {
+                position: relative;
+                width: 300px;
+                height: 300px;
+                margin: 2px;
+
+                @include responsive(mobile) {
+                    margin-bottom: $spacing-medium;
+                }
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+}

@@ -1,0 +1,92 @@
+@use '../abstracts' as *;
+
+.filter-accordion {
+    display: none;
+    margin-bottom: $spacing-large;
+
+    @include responsive(mobile) {
+        display: block;
+    }
+
+    .accordion-button {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        color: $black-light;
+        background: none;
+        text-align: center;
+        transition: background 0.2s ease-in-out;
+        position: relative;
+        font-size: 16px;
+        border-bottom: solid 1px rgba(0,0,0,.1);
+        border-top: solid 1px rgba(0,0,0,.1);
+        
+        &::after {
+            content: '\25b4';
+            transform: scale(1.5);
+            font-size: 17px;
+            position: absolute;
+            top: 14px;
+            margin-left: 7px;
+        }
+        
+        &-active {
+            background: $bp-gradient;
+            color: $antique-white;
+            font-weight: $fw-bold;
+            border: none;
+            
+            &::after {
+                content: '\25be';
+            }
+        }
+    }
+
+    .accordion-content {
+
+        li {
+            display: block;
+            text-align: center;
+            padding: 10px;
+            cursor: pointer;
+            background: darken($blue, 15%);
+            color: $antique-white;
+            font-weight: $fw-medium;
+            border-bottom: solid 1px rgba($light-grey, .3);
+
+            &.active {
+                background: darken($blue, 20%);
+            }
+
+            &:last-child {
+                font-weight: $fw-bold;
+                text-transform: uppercase;
+                position: relative;
+                background: $black-light;
+                
+                i.fa-times-circle {
+                    margin-left: 10px;
+                }
+                
+                &.active {
+                    background: $black-light;
+                }
+                
+            }
+        }
+
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s cubic-bezier(.57,.01,.94,.46);
+        
+
+        &-active {
+            max-height: 100%!important;
+            overflow: visible!important;
+        }
+    }
+
+}

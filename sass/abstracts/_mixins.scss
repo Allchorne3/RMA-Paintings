@@ -1,0 +1,20 @@
+@mixin bg-img($bg){
+    background: {
+        image: url("../img/#{$bg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin img-fade($fbg){
+    background: {
+        image: linear-gradient(COLOR, COLOR), url("../img/#{$fbg}.jpg");
+        size: cover;
+        position: center;
+    }
+}
+
+@mixin size($size){
+    width: #{$size}px;
+    height: #{$size}px;
+}

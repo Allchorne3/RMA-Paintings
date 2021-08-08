@@ -1,0 +1,52 @@
+@use '../base' as b;
+@use '../abstracts' as *;
+
+
+nav {
+
+    // TEMPORARILY COMMENTED OUT UNTIL MOBILE NAV IS SORTED
+    // @include responsive(mobile) {
+    //     display: none;
+    // }
+
+    ul {
+        display: flex;
+
+        li {
+            list-style: none;
+            
+            a {
+                text-decoration: none;
+                font-family: $ff-main;
+                font-weight: $fw-bold;
+                font-size: 14px;
+                color: $antique-white;
+                position: relative;
+
+                &:before {
+                    position: absolute;
+                    content: "";
+                    bottom: -2px;
+                    left: 0;
+                    width: 100%;
+                    height: 2px;
+                    background: $antique-white;
+                    transition: transform $trans-sf;
+                    transform: scaleX(0);
+                    transform-origin: right;
+                }
+                
+                &:hover, &.active {
+                    &:before {
+                        transform: scaleX(1);
+                        transform-origin: left;
+                    }
+                }
+            }
+
+            &:not(:last-child) {
+                margin-right: 30px;
+            }
+        }
+    }
+}

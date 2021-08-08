@@ -1,0 +1,51 @@
+@use 'misc' as m;
+@use './responsive' as r;
+@use './colors' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+// Fonts
+$ff-main: 'Poppins';
+
+// Font Weight
+$fw-thin: 100;
+$fw-extra-light: 200;
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+p {
+    font-family: $ff-main;
+}
+
+h1.title {
+    text-align: center;
+    font-size: 60px;
+    line-height: 60px;
+    font-family: $ff-main;
+    font-weight: $fw-semi-bold;
+    text-transform: uppercase;
+    margin: m.$spacing-larger 10px;
+    
+    @include r.responsive(mobile) {
+        font-size: 40px;
+        line-height: 40px;
+        margin: m.$spacing-large 10px;
+    }
+}
+
+.home h1.title {
+    margin-bottom: 0;
+    background: $antique-white;
+    @include r.responsive(mobile) {
+        margin-bottom: m.$spacing-large;
+    }
+    position: relative;
+    z-index: 1;
+}
+
+h6 {
+    margin-bottom: m.$spacing-medium;
+}

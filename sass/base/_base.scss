@@ -1,0 +1,40 @@
+@use '../abstracts' as *;
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    position: relative;
+    z-index: 99;
+    background: $antique-white;
+}
+
+main {
+    background: $antique-white;
+    min-height: 100vh;
+}
+
+.i {
+    max-width: $maxWidth;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ismall {
+    max-width: $maxWidthSmall;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+img {
+    max-width: 100%;
+}
+
+* {
+    font-family: $ff-main;
+}
+
+.hidden {
+    display: none;
+}

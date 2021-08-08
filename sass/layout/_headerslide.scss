@@ -1,0 +1,76 @@
+@use '../abstracts' as *;
+
+#owl-slider { 
+    position: relative;
+    .item {
+        img {
+            display: block;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.owl-dots {
+    margin: 0!important;
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include responsive(mobile) {
+        bottom: 0px;
+    }
+
+    .owl-dot {
+        &.active span {
+            background: $antique-white!important;
+        }
+
+        span {
+            background: $light-grey!important;
+            width: 15px!important;
+            height: 15px!important;
+            
+            @include responsive(tabletsmall) {
+                width: 12px!important;
+                height: 12px!important;
+            }
+            
+            @include responsive(mobile) {
+                width: 9px!important;
+                height: 9px!important;
+            }
+        }
+    }
+}
+
+// Category and Title of Feature Slide
+.feature-info {
+    position: absolute;
+    top: 50%;
+    left: 14%;
+    transform: translateY(-50%);
+    display: flex;
+    background: red;
+    font-family: 'poppins';
+    // text-transform: uppercase;
+    @include responsive(tabletsmall) {
+        display: none;
+    }
+    
+    h4 {
+        font-size: 30px;
+        padding: 3px 15px;
+        background: #22ACF3;
+        color: #ffffff;
+
+        @include responsive(tablet) {
+            font-size: 20px;
+        }
+
+        &.category {
+            background: $black-light;
+        }
+    }
+}
